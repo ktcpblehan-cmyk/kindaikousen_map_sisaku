@@ -66,13 +66,21 @@
 
         /* 3D表示エリア */
         .viewer-container {
-            position: relative;
+           position: relative;
+           width: 100%;
+           height: 350px;
+         }
+
+        @media (min-width: 900px) {
+        .viewer-container {
             flex: 1;
-            min-height: 480px;
             height: 70vh;
-        }
+            min-height: 480px;
+             }
+         }
 
         model-viewer {
+            display: block;
             width: 100%;
             height: 100%;
             background-color: #ffffff;
@@ -187,9 +195,15 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
-            max-height: 520px;
+            max-height: 240px; 
             overflow-y: auto;
-            padding-right: 4px;
+            padding-right: 4px; 
+        }
+
+        @media (min-width: 900px) {
+        .building-list {
+            max-height: 520px; 
+             }
         }
 
         .building-list::-webkit-scrollbar {
@@ -513,7 +527,7 @@
 
     </div>
 
-    <!-- 階数選択モーダル -->
+    <!-- 階数選択 -->
     <div id="floor-modal" class="modal-overlay">
         <div class="modal-card">
             <button class="close-btn" onclick="closeModal('floor-modal')">&times;</button>
@@ -552,7 +566,7 @@
 
     <script>
 
-        // 各校舎・階数ごとの画像ファイルパスの設定
+        
         const floorPlanImages = {
             '本館': {
                 1: 'images/本館_1F.png',
