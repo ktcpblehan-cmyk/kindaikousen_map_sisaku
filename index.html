@@ -423,11 +423,6 @@
             display: none !important;
         }
 
-        model-viewer.hide-AED-hotspots .Hotspot.AED-pin {
-            display: none !important;
-        }
-
-
        /* トイレとゴミ箱のピン */
         .Hotspot.toire-pin {
             background: #26a69a;
@@ -442,13 +437,6 @@
             border-color: #ffffff;
         }
         .Hotspot.gomi-pin:hover, .Hotspot.gomi-pin:active {
-            background: #00796b;
-        }
-        .Hotspot.AED-pin {
-            background: #26a69a;
-            border-color: #ffffff;
-        }
-        .Hotspot.AED-pin:hover, .Hotspot.AED-pin:active {
             background: #00796b;
         }
 
@@ -474,13 +462,7 @@
             background: #26a69a;
         }
         .toggle-btn.gomi-btn:hover {
-            background: #00796b;
-        }
-        .toggle-btn.AED-btn {
             background: #26a69a;
-        }
-        .toggle-btn.AED-btn:hover {
-            background: #00796b;
         }
 
         .toggle-btn.off {
@@ -562,11 +544,8 @@
                 <button class="Hotspot gomi-pin" slot="hotspot-gomi-3" data-position="80m 16m 5m" data-normal="0m 1m 0m" onclick="alert('ゴミ箱')">
                     ゴミ箱🚮
                 </button>
-                <button class="Hotspot gomi-pin" slot="hotspot-gomi-4" data-position="-15m 16m -30m" data-normal="0m 1m 0m" onclick="alert('ゴミ箱')">
+                <button class="Hotspot gomi-pin" slot="hotspot-gomi-4" data-position="-17m 16m -30m" data-normal="0m 1m 0m" onclick="alert('ゴミ箱')">
                     ゴミ箱🚮
-                </button>
-                <button class="Hotspot AED-pin" slot="hotspot-AED-1" data-position="0m 0m 0m" data-normal="0m 1m 0m" onclick="alert('AED')">
-                    AED
                 </button>
 
             </model-viewer>
@@ -620,13 +599,10 @@
     
                     <button id="toggle-toire-btn" class="toggle-btn off" onclick="toggleToireHotspots()">
                     🚻 トイレピン：OFF
-                    </button>
-                    <button id="toggle-gomi-btn" class="toggle-btn gomi-btn off" onclick="toggleGomiHotspots()">
+                </button>
+                <button id="toggle-gomi-btn" class="toggle-btn gomi-btn off" onclick="toggleGomiHotspots()">
                     🚮 ゴミ箱ピン：OFF
-                    </button>
-                    <button id="toggle-AED-btn" class="toggle-btn AED-btn off" onclick="toggleAEDHotspots()">
-                    AED：OFF
-                    </button>
+                </button>
                     <div class="building-list">
                 </div>
             </div>
@@ -833,20 +809,6 @@
                  btn.classList.remove('off'); 
              } else {
                  btn.textContent = '🚮 ゴミ箱：OFF';
-                 btn.classList.add('off'); 
-             }
-        }
-        function toggleAEDHotspots() {
-             const viewer = document.getElementById('school-viewer');
-             const btn = document.getElementById('toggle-AED-btn')
-
-             viewer.classList.toggle('hide-AED-hotspots');
-
-             if (!viewer.classList.contains('hide-AED-hotspots')) {
-                 btn.textContent = 'AED：ON';
-                 btn.classList.remove('off'); 
-             } else {
-                 btn.textContent = 'AED：OFF';
                  btn.classList.add('off'); 
              }
         }
