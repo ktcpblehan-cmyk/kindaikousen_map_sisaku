@@ -440,6 +440,14 @@
             background: #00796b;
         }
 
+        .Hotspot.AED-pin {
+            background: #26a69a;
+            border-color: #ffffff;
+        }
+        .Hotspot.AED-pin:hover, .Hotspot.AED-pin:active {
+            background: #00796b;
+        }
+
         /* ピン切替ボタン */
         .toggle-btn {
             width: 100%;
@@ -462,6 +470,13 @@
             background: #26a69a;
         }
         .toggle-btn.gomi-btn:hover {
+            background: #26a69a;
+        }
+        
+        .toggle-btn.AED-btn {
+            background: #26a69a;
+        }
+        .toggle-btn.AED-btn:hover {
             background: #26a69a;
         }
 
@@ -489,7 +504,7 @@
             <!-- 3Dモデル表示タグ (ご指定の座標・設定を適用した10棟分のピン配置) -->
             <model-viewer
                 id="school-viewer"
-                class="hide-toire-hotspots hide-gomi-hotspots" 
+                class="hide-toire-hotspots hide-gomi-hotspots hide-AED-hotspots"
                 camera-controls
                 shadow-intensity="0.5"
                 exposure="1"
@@ -538,13 +553,13 @@
                 <button class="Hotspot gomi-pin" slot="hotspot-gomi-1" data-position="47m 16m -15m" data-normal="0m 1m 0m" onclick="alert('ゴミ箱')">
                     ゴミ箱🚮
                 </button>
-                <button class="Hotspot gomi-pin" slot="hotspot-gomi-2" data-position="-16m 16m 18m" data-normal="0m 1m 0m" onclick="alert('ゴミ箱')">
+                <button class="Hotspot gomi-pin" slot="hotspot-gomi-2" data-position="-16m 16m 25m" data-normal="0m 1m 0m" onclick="alert('ゴミ箱')">
                     ゴミ箱🚮
                 </button>
                 <button class="Hotspot gomi-pin" slot="hotspot-gomi-3" data-position="80m 16m 5m" data-normal="0m 1m 0m" onclick="alert('ゴミ箱')">
                     ゴミ箱🚮
                 </button>
-                <button class="Hotspot gomi-pin" slot="hotspot-gomi-4" data-position="0m 16m -30m" data-normal="0m 1m 0m" onclick="alert('ゴミ箱')">
+                <button class="Hotspot gomi-pin" slot="hotspot-gomi-4" data-position="-17m 16m -30m" data-normal="0m 1m 0m" onclick="alert('ゴミ箱')">
                     ゴミ箱🚮
                 </button>
                 <button class="Hotspot AED-pin" slot="hotspot-AED-1" data-position="0m 0m 0m" data-normal="0m 1m 0m" onclick="alert('AED')">
