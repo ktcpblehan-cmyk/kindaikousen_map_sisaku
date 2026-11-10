@@ -422,6 +422,9 @@
         model-viewer.hide-gomi-hotspots .Hotspot.gomi-pin {
             display: none !important;
         }
+        model-viewer.hide-AED-hotspots .Hotspot.AED-pin {
+            display: none !important;
+        }
 
        /* トイレとゴミ箱のピン */
         .Hotspot.toire-pin {
@@ -622,8 +625,8 @@
                     <button id="toggle-gomi-btn" class="toggle-btn gomi-btn off" onclick="toggleGomiHotspots()">
                     🚮 ゴミ箱ピン：OFF
                     </button>
-                    <button id="toggle-AED-btn" class="toggle-btn off" onclick="toggleAEDHotspots()">
-                    AED：OFF
+                    <button id="toggle-AED-btn" class="toggle-btn AED-btn off" onclick="toggleAEDHotspots()">
+                    AEDピン：OFF
                     </button>
                     <div class="building-list">
                 </div>
